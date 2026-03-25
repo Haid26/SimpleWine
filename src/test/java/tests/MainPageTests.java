@@ -4,15 +4,16 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
+import utils.RandomUtils;
 
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
-    String query;
+    String query, email;
 
     @Test
     @DisplayName("Search test")
     public void searchTest() {
-        query = "test";
+        query = RandomUtils.getRandomBeer();
         mainPage.openPage()
                 .hideAllBanners()
                 .searchQuery(query)
@@ -32,16 +33,17 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Subscription test")
     public void subscribeByEmailTest() {
+        email = RandomUtils.getRandomEmail();
         mainPage.openPage()
                 .hideAllBanners()
-                .subcribetonewsletter("test@test.ru")
+                .subcribetonewsletter(email)
                 .checkSubscriptionResult();
     }
 
     @Test
     @DisplayName("Adding Product to cart test")
     public void addProductToCartTest() {
-        query = "moet";
+        query = RandomUtils.getRandomRealVine();
         mainPage.openPage()
                 .hideAllBanners()
                 .searchQuery(query)

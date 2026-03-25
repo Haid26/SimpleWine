@@ -18,7 +18,7 @@ public class MainPage {
             topWidgetCloseButton = $(".close.js-close"),
             searchInput = $("[data-autotest-target-id=header-search-input]"),
             searchButton = $("[data-autotest-target-id=header-search-go]"),
-            searchResults = $("[data-autotest-target-id=search-main-found-alike]"),
+            searchResults = $("[data-autotest-target=search-main]"),
             cityListButton = $("[data-autotest-target-id=header-location-dropdown]"),
             citiesListScroll = $(".CityList_list__4uDZm"),
             emailInput = $("[data-autotest-target-id=footer-menu-subscribe-input]"),

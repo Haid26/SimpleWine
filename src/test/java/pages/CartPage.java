@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CartPage {
     private final SelenideElement productLabel = $("[data-autotest-target-id=cart-available-item-title-1]"),
-            productPrice = $(".item__price"),
+            productPrice = $("[data-autotest-target-id=cart-available-item-price-1]"),
             productQuantityInput = $("[data-autotest-target=cart-available-item-input]"),
             productQuantityInputLabel = $("[data-autotest-target=cart-available-item-input] ~ span"),
             menuCartButton = $("[data-autotest-target-id=header-user-cart-link]"),
