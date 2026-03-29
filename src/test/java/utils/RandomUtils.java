@@ -16,7 +16,7 @@ public class RandomUtils {
     }
 
     public static String getRandomRealVine(){
-        return faker.options().option("Asti", "Veuve Clicquot", "prosecco");
+        return faker.options().option("Asti", "Шампанское", "prosecco");
     }
 
     public static int getRandomAmount(){

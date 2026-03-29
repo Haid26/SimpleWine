@@ -21,16 +21,6 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Disabled("Пока не разберусь с hidden списка городов")
-    @DisplayName("Change city test")
-    public void cityChangeTest() {
-        mainPage.openPage()
-                .hideAllBanners()
-                .setCity(3)
-                .checkCity();
-    }
-
-    @Test
     @DisplayName("Subscription test")
     public void subscribeByEmailTest() {
         email = RandomUtils.getRandomEmail();
