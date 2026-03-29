@@ -2,8 +2,6 @@ package utils;
 
 import com.github.javafaker.Faker;
 
-import java.util.Locale;
-
 public class RandomUtils {
     static Faker faker = new Faker();
 

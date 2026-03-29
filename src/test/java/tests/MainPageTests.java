@@ -1,4 +1,4 @@
-package tests;
+﻿package tests;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -9,6 +9,7 @@ import utils.RandomUtils;
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     String query, email;
+
 
     @Test
     @DisplayName("Search test")
