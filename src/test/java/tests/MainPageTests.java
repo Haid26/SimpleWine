@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import utils.RandomUtils;
 
+
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     String query, email;
