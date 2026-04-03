@@ -18,6 +18,6 @@ public class RandomUtils {
     }
 
     public static int getRandomAmount(){
-        return faker.number().numberBetween(1,101);
+        return faker.number().numberBetween(1,5);
     }
 }
