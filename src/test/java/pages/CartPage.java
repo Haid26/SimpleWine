@@ -24,13 +24,13 @@ public class CartPage {
     final String emptyPrice = "0 ₽";
     int decimalPrice;
 
-    @Step("Check that {value} in cart")
+    @Step("Проверка что товар: {value} в корзине")
     public CartPage checkCartProduct(String value) {
         productLabel.shouldHave(text(value));
         return this;
     }
 
-    @Step("Click on cart logo")
+    @Step("Клин по логотипу корзины")
     public CartPage cartButtonClick() {
         menuCartButton.click();
         return this;
@@ -49,7 +49,7 @@ public class CartPage {
 
     }
 
-    @Step("Check increasing quantity")
+    @Step("Изменение количества товаров до {quantity}")
     public CartPage increaseQuantity(int quantity) {
         price = productPrice.getText();
         decimalPrice = transformPriceToInt(price);
@@ -58,21 +58,20 @@ public class CartPage {
         return this;
     }
 
-    @Step("Check that sum price is changed")
+    @Step("Проверка что сумма заказа изменилась")
     public CartPage checkSumPrice(int quantity) {
-        //while ($("::after").is(visible))
         sleep(5000);
         assertEquals(transformPriceToString(decimalPrice * quantity), productPrice.getText());
         return this;
     }
 
-    @Step("Delete product from cart")
+    @Step("Удаление товара из корзины")
     public CartPage deleteProduct() {
         deleteProductButton.click();
         return this;
     }
 
-    @Step("Check zero final price")
+    @Step("Проверка стоимости корзины после очистки")
     public CartPage chechZeroFinalPrice() {
         cartSum.shouldHave(text(emptyPrice));
         return this;
