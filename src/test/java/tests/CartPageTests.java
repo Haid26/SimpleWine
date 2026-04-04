@@ -17,7 +17,7 @@ public class CartPageTests extends TestBase {
     int amount;
 
     @Test
-    @DisplayName("Adding Product to cart test and changing amout")
+    @DisplayName("Тест изменения количества товара в корзине")
     public void addProductToCartAndChangeAmountTest() {
         query = randomUtils.getRandomRealVine();
         amount = randomUtils.getRandomAmount();
@@ -31,7 +31,7 @@ public class CartPageTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Deleting last Product in cart test")
+    @DisplayName("Тест удаления товаров из корзины")
     public void deleteLastProductFromCartTest() {
         query = randomUtils.getRandomRealVine();
         mainPage.openPage()
