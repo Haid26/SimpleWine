@@ -12,13 +12,14 @@ public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     CartPage cartPage = new CartPage();
     SearchResultsPage searchResultsPage = new SearchResultsPage();
+    RandomUtils randomUtils = new RandomUtils();
     String query, email;
 
 
     @Test
     @DisplayName("Тест поиска")
     public void searchTest() {
-        query = RandomUtils.getRandomBeer();
+        query = randomUtils.getRandomBeer();
         mainPage.openPage()
                 .hideAllBanners()
                 .searchQuery(query);
@@ -28,7 +29,7 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Тест подписки на рассылку")
     public void subscribeByEmailTest() {
-        email = RandomUtils.getRandomEmail();
+        email = randomUtils.getRandomEmail();
         mainPage.openPage()
                 .hideAllBanners()
                 .subcribetonewsletter(email)

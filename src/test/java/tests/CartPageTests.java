@@ -11,6 +11,7 @@ public class CartPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     CartPage cartPage = new CartPage();
     SearchResultsPage searchResultsPage = new SearchResultsPage();
+    RandomUtils randomUtils = new RandomUtils();
 
     String query;
     int amount;
@@ -18,8 +19,8 @@ public class CartPageTests extends TestBase {
     @Test
     @DisplayName("Adding Product to cart test and changing amout")
     public void addProductToCartAndChangeAmountTest() {
-        query = RandomUtils.getRandomRealVine();
-        amount = RandomUtils.getRandomAmount();
+        query = randomUtils.getRandomRealVine();
+        amount = randomUtils.getRandomAmount();
         mainPage.openPage()
                 .hideAllBanners()
                 .searchQuery(query);
@@ -32,7 +33,7 @@ public class CartPageTests extends TestBase {
     @Test
     @DisplayName("Deleting last Product in cart test")
     public void deleteLastProductFromCartTest() {
-        query = RandomUtils.getRandomRealVine();
+        query = randomUtils.getRandomRealVine();
         mainPage.openPage()
                 .hideAllBanners()
                 .searchQuery(query);
@@ -46,7 +47,7 @@ public class CartPageTests extends TestBase {
     @Test
     @DisplayName("Тест добавления товара в корзину")
     public void addProductToCartTest() {
-        query = RandomUtils.getRandomRealVine();
+        query = randomUtils.getRandomRealVine();
         mainPage.openPage()
                 .hideAllBanners()
                 .searchQuery(query);

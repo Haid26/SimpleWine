@@ -3,21 +3,21 @@ package utils;
 import com.github.javafaker.Faker;
 
 public class RandomUtils {
-    static Faker faker = new Faker();
+    Faker faker = new Faker();
 
-    public static String getRandomEmail(){
+    public String getRandomEmail() {
         return faker.internet().emailAddress();
     }
 
-    public static String getRandomBeer(){
+    public String getRandomBeer() {
         return faker.beer().name();
     }
 
-    public static String getRandomRealVine(){
+    public String getRandomRealVine() {
         return faker.options().option("Asti", "пиво", "prosecco");
     }
 
-    public static int getRandomAmount(){
-        return faker.number().numberBetween(1,5);
+    public int getRandomAmount() {
+        return faker.number().numberBetween(1, 5);
     }
 }
